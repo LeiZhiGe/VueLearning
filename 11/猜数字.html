@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="./js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>猜数字游戏</h1>
+			<input v-model="userword" />
+			<li v-if="keyword==userword">猜对了</li>
+			<li v-else-if="keyword<userword">数字过大</li>
+			<li v-else-if="keyword>userword">数字过小</li>
+			</div>
+		<script type="text/javascript">
+		let v=new Vue({
+			el:'#app',
+			data:{
+					keyword:Math.round(Math.random()*10),
+					userword:''
+			}
+		})	
+		</script>
+</body>
+</html>
