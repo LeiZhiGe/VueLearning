@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+			<div id="app">
+				<img src="./img/1.jpg" @click="count()">
+				<h2>还有{{counter}}处不同</h2>
+			</div>
+			
+			
+			<script type="text/javascript">
+				new Vue({
+					el:'#app',
+					data() {
+						return{
+							counter:4,
+							c1:0,
+							c2:0,
+							c3:0,
+							c4:0,
+							c5:0,
+							c6:0,
+							c7:0,
+							c8:0,
+							c12:0,
+							c34:0,
+							c56:0,
+							c78:0
+						}
+					},
+					
+					methods:{
+						show(){			
+							alert(event.clientX+","+event.clientY)	
+							},
+							
+						count(){
+							if(event.clientX>9&&event.clientX<32&&event.clientY>115&&event.clientY<139){
+								this.c1++
+								if(this.c1>1){
+									this.c1=1
+									alert("此处已经找到过了")}
+							}
+							if(event.clientX>308&&event.clientX<334&&event.clientY>126&&event.clientY<142){
+								this.c2++
+								if(this.c2>1){
+									this.c2=1
+									alert("此处已经找到过了")}
+							}
+							if(event.clientX>40&&event.clientX<88&&event.clientY>200&&event.clientY<236){
+								this.c3++
+								if(this.c3>1){
+									this.c3=1
+									alert("此处已经找到过了")}
+							}
+							if(event.clientX>351&&event.clientX<397&&event.clientY>198&&event.clientY<235){
+								this.c4++
+								if(this.c4>1){
+									this.c4=1
+									alert("此处已经找到过了")}
+							}
+							if(event.clientX>161&&event.clientX<218&&event.clientY>222&&event.clientY<305){
+								this.c5++
+								if(this.c5>1){
+									this.c5=1
+									alert("此处已经找到过了")}
+							}
+							if(event.clientX>435&&event.clientX<457&&event.clientY>255&&event.clientY<306){
+								this.c6++
+								if(this.c6>1){
+									this.c6=1
+									alert("此处已经找到过了")}
+							}
+							if(event.clientX>8&&event.clientX<100&&event.clientY>29&&event.clientY<55){
+								this.c7++
+								if(this.c7>1){
+									this.c7=1
+									alert("此处已经找到过了")}
+							}
+							if(event.clientX>316&&event.clientX<418&&event.clientY>32&&event.clientY<52){
+								this.c8++
+								if(this.c8>1){
+									this.c8=1
+									alert("此处已经找到过了")}
+							}
+							if(this.c1==1&&this.c2==1){
+								this.c12++
+							}
+							if(this.c3==1&&this.c4==1){
+								this.c34++
+							}
+							if(this.c5==1&&this.c6==1){
+								this.c56++
+							}
+							if(this.c7==1&&this.c8==1){
+								this.c78++
+							}
+							if(this.c12==1){this.counter--}
+							if(this.c34==1){this.counter--}
+							if(this.c56==1){this.counter--}
+							if(this.c78==1){this.counter--}
+							if(this.counter==0){alert("恭喜你，通过了")}
+						}
+					}
+				})
+			</script>
+	</body>
+</html>
